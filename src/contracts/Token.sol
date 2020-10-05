@@ -3,7 +3,7 @@ pragma solidity ^0.5.0;
 contract MMDToken {
     string public name = "MMD Token";
     string public symbol = "MMD";
-    string public standard = "Dapp Token v1.0";
+    string public standard = "MMD Token v1.0";
     uint8 public decimal = 18;
     uint256 public totalSupply = 1000000000000000000000000;
 
