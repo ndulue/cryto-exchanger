@@ -33,7 +33,7 @@ contract('EthSwap', ([deployer, investor]) => {
 
         it('contract has a name', async () => {
             const name = await ethSwap.name()
-            assert.equal(name, 'EthSwap Instant Exchange')
+            assert.equal(name, 'EtherSwap Exchange')
         })
 
         it('contract has tokens', async () => {
@@ -84,11 +84,11 @@ contract('EthSwap', ([deployer, investor]) => {
         })
 
         it('allows user to instantly purchase tokens form ethswap for a fixed price', async () => {
-            //investor receives token balance after purchase
+            //check if investor has sold the token
             let investorBalance = await token.balanceOf(investor)
             assert.equal(investorBalance.toString(), tokens('0'))
 
-            //check ethSwap balance after purchase
+            //check ethSwap balance after sale
             let ethSwapBalance 
             ethSwapBalance = await token.balanceOf(ethSwap.address)
             assert.equal(ethSwapBalance.toString(), tokens('1000000'))

@@ -50,7 +50,7 @@ contract EthSwap {
         //Require the EthSwap has enough Ether
         require(address(this).balance >= etherAmount);
 
-        //Perform sale
+        //Perform sale 
         token.transferFrom(msg.sender, address(this), _amount);
         msg.sender.transfer(etherAmount);
 
